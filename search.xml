@@ -3,7 +3,28 @@
   <entry>
     <title>测试文章</title>
     <url>/2020-08-23-18-15-45/</url>
-    <content><![CDATA[<h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><p>1<br>1<br>1<br>1<br>1<br>1<br>1</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1>
+        <div id="aplayer-MmnNlzQi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-MmnNlzQi"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Wicked Games",
+              author: "111",
+              url: "http://lc-8TQhzYIv.cn-n1.lcfile.com/1a7afdd79a2d15f7b531/Wicked%20Games.mp3",
+              pic: "http://lc-8TQhzYIv.cn-n1.lcfile.com/ce6da9c138c33485d351/Wicked%20Games.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<p>1<br>1<br>1<br>1<br>1<br>1</p>
 <p>1<br>1</p>
 <a id="more"></a>
 <p>1<br>1<br>1<br>1<br>1</p>
@@ -12,7 +33,7 @@
   <entry>
     <title>Hello World</title>
     <url>/2020-08-24-08-13-58/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
