@@ -32,20 +32,31 @@
     var CONFIG = {"hostname":"lituo66.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://lituo66.top/2020-08-24-08-13-58/index.html">
+<meta property="og:title" content="STC8F系列单片机定时器学习">
+<meta property="og:url" content="http://lituo66.top/2019-03-15-17-20-33/index.html">
 <meta property="og:site_name" content="李拓的小站">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-24T00:13:58.581Z">
-<meta property="article:modified_time" content="2020-08-23T08:44:10.253Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AELH6s.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEOY4S.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEjYlQ.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEjLnA.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEjbXd.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEjH6H.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AEL3YF.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AVPFRP.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AVit6f.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/15/AVFNCR.jpg">
+<meta property="article:published_time" content="2019-03-15T09:20:33.000Z">
+<meta property="article:modified_time" content="2020-08-25T01:05:23.575Z">
 <meta property="article:author" content="李拓">
-<meta property="article:tag" content="STM32,linux">
+<meta property="article:tag" content="STC8F">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/03/15/AELH6s.jpg">
 
-<link rel="canonical" href="http://lituo66.top/2020-08-24-08-13-58/">
+<link rel="canonical" href="http://lituo66.top/2019-03-15-17-20-33/">
 
 
 <script id="page-configurations">
@@ -58,7 +69,7 @@
   };
 </script>
 
-  <title>Hello World | 李拓的小站</title>
+  <title>STC8F系列单片机定时器学习 | 李拓的小站</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176095619-1"></script>
     <script>
@@ -98,7 +109,9 @@
   </style>
 </noscript>
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><script src="/js/prism.js"></script>
+<script src="/js/prism-line-numbers.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
@@ -148,17 +161,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">10</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -214,7 +227,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://lituo66.top/2020-08-24-08-13-58/">
+    <link itemprop="mainEntityOfPage" href="http://lituo66.top/2019-03-15-17-20-33/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://i.imgur.com/4uN5rg2.jpg">
@@ -227,7 +240,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          STC8F系列单片机定时器学习
         </h1>
 
         <div class="post-meta">
@@ -237,15 +250,24 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-24 08:13:58" itemprop="dateCreated datePublished" datetime="2020-08-24T08:13:58+08:00">2020-08-24</time>
+              <time title="创建时间：2019-03-15 17:20:33" itemprop="dateCreated datePublished" datetime="2019-03-15T17:20:33+08:00">2019-03-15</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-23 16:44:10" itemprop="dateModified" datetime="2020-08-23T16:44:10+08:00">2020-08-23</time>
+                <time title="修改时间：2020-08-25 09:05:23" itemprop="dateModified" datetime="2020-08-25T09:05:23+08:00">2020-08-25</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">单片机</span></a>
+                </span>
+            </span>
 
           
   
@@ -256,8 +278,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020-08-24-08-13-58/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020-08-24-08-13-58/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019-03-15-17-20-33/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019-03-15-17-20-33/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -272,20 +294,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2<br>主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。</p>
+<a id="more"></a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>由于STC8F添加了很多特殊寄存器，所以请先按下图操作</p>
+<img src="https://s2.ax1x.com/2019/03/15/AELH6s.jpg" alt="AELH6s.jpg" border="0" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>然后写程序时，不需要写<code>#include &lt;reg51.h&gt;</code>而是写<code>#include &lt;stc8.h&gt;</code>,这个头文件已经将特殊功能寄存器全部定义好了。</p>
+<h1 id="Timer4"><a href="#Timer4" class="headerlink" title="Timer4"></a>Timer4</h1><p>Timer4，定时器/计数器。</p>
+<h2 id="控制寄存器-T4T3M"><a href="#控制寄存器-T4T3M" class="headerlink" title="控制寄存器-T4T3M"></a>控制寄存器-T4T3M</h2><p>不支持位寻址，复位值[0000,0000]，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEOY4S.jpg" alt="AEOY4S.jpg" border="0" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="中断标志辅助寄存器-UXINTIF"><a href="#中断标志辅助寄存器-UXINTIF" class="headerlink" title="中断标志辅助寄存器-UXINTIF"></a>中断标志辅助寄存器-UXINTIF</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjYlQ.jpg" alt="AEjYlQ.jpg" border="0" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="中断使能寄存器-IE"><a href="#中断使能寄存器-IE" class="headerlink" title="中断使能寄存器-IE"></a>中断使能寄存器-IE</h2><p>可位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjLnA.jpg" alt="AEjLnA.jpg" border="0" />
 
+<h2 id="中断使能寄存器2-IE2"><a href="#中断使能寄存器2-IE2" class="headerlink" title="中断使能寄存器2-IE2"></a>中断使能寄存器2-IE2</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjbXd.jpg" alt="AEjbXd.jpg" border="0" />
+
+<img src="https://s2.ax1x.com/2019/03/15/AEjH6H.jpg" alt="AEjH6H.jpg" border="0" />
+
+<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><p>定时器/计数器4的工作模式固定为 16 位重载模式。<br>T4L和T4H组合成为一个16位寄存器，T4L为低字节，T4H 为高字节。当[T4H,T4L]中的16 位计数值溢出时，系统会自动将内部16 位重载寄存器中的重载值装入[T4H,T4L]中。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEL3YF.jpg" alt="AEL3YF.jpg" border="0" />
+
+<h2 id="定时器初值计算"><a href="#定时器初值计算" class="headerlink" title="定时器初值计算"></a>定时器初值计算</h2><p>计算公式：</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVPFRP.jpg" alt="AVPFRP.jpg" border="0" />
+
+<p>65536：16位定时器，2<sup>16</sup>+1=65535+1=65536<br>T：想要设置的中断时间。<br>F<sub>osc</sub>：单片机晶振频率。<br>A：根据<a href="#%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8-T4T3M">控制寄存器-T4T3M</a>中<code>T4x12</code>:定时器4速度控制位。12T模式，即CPU时钟12 分频（FOSC/12），所以A=12；1T模式，即CPU时钟不分频分频（FOSC/1），所以A=1。<br>THx：高八位初值。把N对256求模。<br>TLx：低八位初值。把N对256求余。<br>例如：24M晶振，12分频，定时10ms。计算得到THx=177，TLx=224。转换为十六进制是THx=0xB1，TLx=0xE0</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVit6f.jpg" alt="AVit6f.jpg" border="0" />
+
+<h2 id="范例程序"><a href="#范例程序" class="headerlink" title="范例程序"></a>范例程序</h2><pre><code>#include &lt;STC8.H&gt;
+
+sbit LED=P1^0;
+
+void TM4_Isr() interrupt 20
+&amp;#123;
+    LED = !LED;                                 //测试端口
+    AUXINTIF &amp;= ~T4IF;                          //清中断标志
+&amp;#125;
+
+void main()
+&amp;#123;
+    //晶振频率为24MHz，定时10ms
+    T4L = 0xE0;
+    T4H = 0xB1;
+    T4T3M |= 0x80;                              //启动定时器
+    IE2 |= ET4;                                 //使能定时器4中断
+    EA = 1;                                    //开启中断
+
+    while(1);
+&amp;#125;</code></pre>
+<p>测试效果有些误差。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVFNCR.jpg" alt="AVFNCR.jpg" border="0" />
+
+<p><strong>本片文章会根据我的学习过程进行更新</strong></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -305,6 +370,10 @@
     
 
       <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/STC8F/" rel="tag"><i class="fa fa-tag"></i> STC8F</a>
+          </div>
 
         
 
@@ -312,10 +381,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020-08-23-18-15-45/" rel="prev" title="测试文章">
-      <i class="fa fa-chevron-left"></i> 测试文章
+    <a href="/2019-02-26-18-46-01/" rel="prev" title="Hexo实时预览Markdown">
+      <i class="fa fa-chevron-left"></i> Hexo实时预览Markdown
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2019-04-11-21-57-27/" rel="next" title="音视频处理软件ffmpeg介绍">
+      音视频处理软件ffmpeg介绍 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -375,7 +447,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Timer4"><span class="nav-number">1.</span> <span class="nav-text">Timer4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8-T4T3M"><span class="nav-number">1.1.</span> <span class="nav-text">控制寄存器-T4T3M</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E6%A0%87%E5%BF%97%E8%BE%85%E5%8A%A9%E5%AF%84%E5%AD%98%E5%99%A8-UXINTIF"><span class="nav-number">1.2.</span> <span class="nav-text">中断标志辅助寄存器-UXINTIF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A8-IE"><span class="nav-number">1.3.</span> <span class="nav-text">中断使能寄存器-IE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E4%BD%BF%E8%83%BD%E5%AF%84%E5%AD%98%E5%99%A82-IE2"><span class="nav-number">1.4.</span> <span class="nav-text">中断使能寄存器2-IE2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">工作模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E5%88%9D%E5%80%BC%E8%AE%A1%E7%AE%97"><span class="nav-number">1.6.</span> <span class="nav-text">定时器初值计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8C%83%E4%BE%8B%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.7.</span> <span class="nav-text">范例程序</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -391,20 +463,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

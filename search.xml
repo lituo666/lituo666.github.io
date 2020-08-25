@@ -5,12 +5,12 @@
     <url>/2020-08-23-18-15-45/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
 <li>音乐播放
-        <div id="aplayer-XdCYxAfp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-UZmjFEtA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-XdCYxAfp"),
+            element: document.getElementById("aplayer-UZmjFEtA"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -30,7 +30,7 @@
 <p>1<br>1</p>
 <a id="more"></a>
 <p>1<br>1<br>1<br>1<br>1</p>
-]]></content>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>a</category>
         <category>b</category>
@@ -43,21 +43,740 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020-08-24-08-13-58/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Hexo实时预览Markdown</title>
+    <url>/2019-02-26-18-46-01/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>用Hexo写文章时因为时用的Markdown语法写的，所以就非常需要进行实时的编辑预览效果，一些文本编辑软件或许可以预览，但是有时和实际总是用点差距，所以介绍的这款插件就可以实现实时预览效果。</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-Browsersync"><a href="#Hexo-Browsersync" class="headerlink" title="Hexo-Browsersync"></a>Hexo-Browsersync</h2><p>首先进入Hexo项目目录下，运行如下命令安装<code>hexo-browsersync</code>插件</p>
+<pre><code>npm install hexo-browsersync --save</code></pre>
+<p>等待安装完成，这个安装过程最好挂全局代理，否则可能有点慢。<br>然后运行<code>hexo s</code>出现一下内容说明成功啦</p>
+<pre><code>$ hexo s
+INFO  Start processing
+[Browsersync] Access URLs:
+ ----------------------------------
+          UI: http://localhost:3001
+ ----------------------------------
+ UI External: http://localhost:3001
+ ----------------------------------
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre>
+<p>现在就可以啦，只要在编辑文档时保存一下，网页就会自动进行刷新，就可以马上看到效果啦。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux screen 命令详解</title>
+    <url>/2019-04-16-20-36-05/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><code>screen -S yourname</code> -&gt; 新建一个叫yourname的session<br><code>screen -ls</code> -&gt; 列出当前所有的session<br><code>screen -r yourname</code> -&gt; 回到yourname这个session<br><code>screen -d yourname</code> -&gt; 远程detach某个session<br><code>screen -d -r yourname</code> -&gt; 结束当前session并回到yourname这个session</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>组合键<code>Ctrl+A+D</code>暂时离开当前session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态。</p>
+<p>强制关闭某个screen，首先screen -list查看现有screen，然后kill [PID]，如下</p>
+<pre><code>[root@instance-4x27gapo ~]# screen -list
+There are screens on:
+    1529.fivem    (Detached)
+    1291.pts-0.instance-4x27gapo    (Detached)
+2 Sockets in /var/run/screen/S-root.
+[root@instance-4x27gapo ~]# kill 1291
+[root@instance-4x27gapo ~]# screen -list
+There is a screen on:
+    1529.fivem    (Detached)
+1 Socket in /var/run/screen/S-root.</code></pre>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown-基本语法</title>
+    <url>/2019-02-16-14-04-05/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用<code>#</code>或者<code>&lt;h1&gt;</code><br>    # 这是一级标题<br>    <h2> 这是二级标题<br>    ### 这是三级标题<br>    <h4> 这是四级标题<br>    ##### 这是五级标题<br>    <h6> 这是六级标题<br>效果如下：</p>
+<a id="more"></a>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2> 这是二级标题
+### 这是三级标题
+<h4> 这是四级标题
+##### 这是五级标题
+<h6> 这是六级标题
+## 强调
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<pre><code>*这会是 斜体 的文字*
+_这会是 斜体 的文字_
+**这会是 粗体 的文字**
+__这会是 粗体 的文字__
+_你也 **组合** 这些符号_
+~~这个文字将会被横线删除~~</code></pre>
+<p>效果</p>
+<p><em>这会是 斜体 的文字</em><br><em>这会是 斜体 的文字</em><br><strong>这会是 粗体 的文字</strong><br><strong>这会是 粗体 的文字</strong><br><em>你也 <strong>组合</strong> 这些符号</em><br><del>这个文字将会被横线删除</del></p>
+<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><pre><code>H&lt;sub&gt;2&lt;/sub&gt;O  CO&lt;sub&gt;2&lt;/sub&gt;
+爆米&lt;sup&gt;TM&lt;/sup&gt;</code></pre>
+<p>效果<br>H<sub>2</sub>O  CO<sub>2</sub><br>爆米<sup>TM</sup></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><pre><code>* Item 1
+* Item 2
+* Item 3</code></pre>
+<p>效果</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><pre><code>1. Item 1
+1. Item 2
+1. Item 3</code></pre>
+<p>效果</p>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<h2 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h2><pre><code>![效果](https://i.imgur.com/4uN5rg2.jpg)</code></pre>
+<p>效果如下，无法控制图片大小。<br><img src="https://i.imgur.com/4uN5rg2.jpg" alt="效果"></p>
+<pre><code>&lt;img src=&quot;https://i.imgur.com/4uN5rg2.jpg&quot; width=&quot;50%&quot; title=&quot;效果&quot; /&gt;</code></pre>
+<p>效果<br><img src="https://i.imgur.com/4uN5rg2.jpg" width="50%" title="效果" /></p>
+<h2 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h2><p>有三种形式</p>
+<pre><code>&lt;a href=&quot;https://lituo666.top&quot;&gt;我的个人网站&lt;/a&gt;
+https://lituo666.top
+[我的个人网站](https://lituo666.top)</code></pre>
+<p>效果<br><a href="https://lituo666.top">我的个人网站</a><br><a href="https://lituo666.top/">https://lituo666.top</a><br><a href="https://lituo666.top/">我的个人网站</a></p>
+<h2 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h2><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//player.bilibili.com/player.html?aid<span class="token punctuation">=</span>244316153&amp;bvid<span class="token punctuation">=</span>BV1bv411i73b&amp;cid<span class="token punctuation">=</span>226649251&amp;page<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">scrolling</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> <span class="token attr-name">framespacing</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">allowfullscreen</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>600<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>效果</p>
+<iframe src="//player.bilibili.com/player.html?aid=244316153&bvid=BV1bv411i73b&cid=226649251&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="600"> </iframe>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><pre><code>正如 Kanye West 所说：
+&gt; We&#39;re living the future so
+&gt; the present is our past.
+&gt;&gt; We&#39;re living the future so
+&gt;&gt; the present is our past.</code></pre>
+<p>正如 Kanye West 所说：</p>
+<blockquote>
+<p>We’re living the future so<br>the present is our past.</p>
+<blockquote>
+<p>We’re living the future so<br>the present is our past.</p>
+</blockquote>
+</blockquote>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><pre><code>如下，三个或者更多的连字符、星号、下划线
+
+---
+连字符
+***
+星号
+___
+下划线</code></pre>
+<p>如下，三个或者更多的连字符、星号、下划线</p>
+<hr>
+<p>连字符</p>
+<hr>
+<p>星号</p>
+<hr>
+<p>下划线</p>
+<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><pre><code>我觉得你应该在这里使用
+`&lt;addr&gt;` 才对。</code></pre>
+<p>效果</p>
+<p>我觉得你应该在这里使用<br><code>&lt;addr&gt;</code> 才对。</p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><pre><code>```
+这是代码块
+这是代码块
+```</code></pre>
+<blockquote>
+<p>上述代码块方式可能会导致使用<code>&lt;!--more--&gt;</code>来控制文章在首页展示的长度时，无法使代码块显示。<br>应该使用<code>Tab</code>键缩进<code>4</code>个字符的方式表示代码块</p>
+</blockquote>
+<h2 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h2><p>例如，给 ruby 代码添加语法高亮：</p>
+<pre><code>```ruby
+require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+```</code></pre>
+<p>效果</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token keyword">require</span> <span class="token string">'redcarpet'</span>
+markdown <span class="token operator">=</span> <span class="token constant">Redcarpet</span><span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span>
+puts markdown<span class="token punctuation">.</span>to_html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><pre><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item</code></pre>
+<p>效果</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
+<li><input checked="" disabled="" type="checkbox"> list syntax required (any unordered or ordered list supported)</li>
+<li><input checked="" disabled="" type="checkbox"> this is a complete item</li>
+<li><input disabled="" type="checkbox"> this is an incomplete item</li>
+<li><input checked="" disabled="" type="checkbox"> hahah</li>
+</ul>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code>First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column</code></pre>
+<p>效果</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+</tr>
+</tbody></table>
+<img src="https://user-images.githubusercontent.com/1908863/28243710-945e3004-699a-11e7-9a5f-d74f6c944c3b.png" width="100%" title="特殊表格" />
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Markdown-笔记</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next-折叠块功能</title>
+    <url>/2019-02-16-09-05-03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基于Hexo-Next的主题修改添加折叠块功能"><a href="#基于Hexo-Next的主题修改添加折叠块功能" class="headerlink" title="基于Hexo Next的主题修改添加折叠块功能"></a>基于Hexo Next的主题修改添加折叠块功能</h1><h2 id="在post-details-js中添加折叠js"><a href="#在post-details-js中添加折叠js" class="headerlink" title="在post-details.js中添加折叠js"></a>在post-details.js中添加折叠js</h2><p>next主题的主要js位于themes/next/source/js/src/post-details.js<br>在里面找合适的位置，添加如下代码：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token string">'.fold_hider'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'>.fold'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parentNode<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slideToggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'>:first'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//默认情况下折叠</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div.fold"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"display"</span><span class="token punctuation">,</span><span class="token string">"none"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<a id="more"></a>
+<h2 id="自定义内建标签"><a href="#自定义内建标签" class="headerlink" title="自定义内建标签"></a>自定义内建标签</h2><p>在主题scripts下添加一个tags.js, 位于themes/next/scripts/tags.js</p>
+<pre class="line-numbers language-js"><code class="language-js">
+<span class="token comment" spellcheck="true">/*
+  @haohuawu
+  修复 Nunjucks 的 tag 里写 ```代码块```，最终都会渲染成 undefined 的问题
+  https://github.com/hexojs/hexo/issues/2400
+*/</span>
+<span class="token keyword">const</span> rEscapeContent <span class="token operator">=</span> <span class="token regex">/&lt;escape(?:[^>]*)>([\s\S]*?)&lt;\/escape>/g</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> placeholder <span class="token operator">=</span> <span class="token string">'\uFFFD'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> rPlaceholder <span class="token operator">=</span> <span class="token regex">/(?:&lt;|&amp;lt;)\!--\uFFFD(\d+)--(?:>|&amp;gt;)/g</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cache <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">escapeContent</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token string">'&lt;!--'</span> <span class="token operator">+</span> placeholder <span class="token operator">+</span> <span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'-->'</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'before_post_render'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  data<span class="token punctuation">.</span>content <span class="token operator">=</span> data<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>rEscapeContent<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>match<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">escapeContent</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'after_post_render'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  data<span class="token punctuation">.</span>content <span class="token operator">=</span> data<span class="token punctuation">.</span>content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>rPlaceholder<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> cache<span class="token punctuation">[</span>arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+再继续添加一个fold<span class="token punctuation">.</span>js
+
+<span class="token comment" spellcheck="true">/* global hexo */</span>
+<span class="token comment" spellcheck="true">// Usage: &amp;#123;% fold ???? %&amp;#125; Something &amp;#123;% endfold %&amp;#125;</span>
+<span class="token keyword">function</span> fold <span class="token punctuation">(</span>args<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> text <span class="token operator">=</span> args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>text<span class="token punctuation">)</span> text <span class="token operator">=</span> <span class="token string">"点击显/隐"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token string">'&lt;div>&lt;div class="fold_hider">&lt;div class="close hider_title">'</span> <span class="token operator">+</span> text <span class="token operator">+</span> <span class="token string">'&lt;/div>&lt;/div>&lt;div class="fold">\n'</span> <span class="token operator">+</span> hexo<span class="token punctuation">.</span>render<span class="token punctuation">.</span><span class="token function">renderSync</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>text<span class="token punctuation">:</span> content<span class="token punctuation">,</span> engine<span class="token punctuation">:</span> <span class="token string">'markdown'</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n&lt;/div>&lt;/div>'</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>tag<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'fold'</span><span class="token punctuation">,</span> fold<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>ends<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最后，添加几个自定义样式，位置themes/next/source/css/_custom/custom.styl</p>
+<pre class="line-numbers language-styl"><code class="language-styl">.hider_title&#123;
+    font-family: "Microsoft Yahei";
+    cursor: pointer;
+&#125;
+.close:after&#123;
+    content: "▼";
+&#125;
+.open:after&#123;
+    content: "▲";
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最后，在我们需要折叠的地方前后添加便签，示例用法：</p>
+<pre><code>&amp;#123;% fold 点击显/隐内容 %&amp;#125;
+需要折叠内容，默认折叠
+&amp;#123;% endfold %&amp;#125;</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.rmiao.top/hexo-fold-block/">https://blog.rmiao.top/hexo-fold-block/</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Next-笔记</category>
+      </categories>
+      <tags>
+        <tag>Next-优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>STC8F系列单片机定时器学习</title>
+    <url>/2019-03-15-17-20-33/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2<br>主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。</p>
+<a id="more"></a>
+
+<p>由于STC8F添加了很多特殊寄存器，所以请先按下图操作</p>
+<img src="https://s2.ax1x.com/2019/03/15/AELH6s.jpg" alt="AELH6s.jpg" border="0" />
+
+<p>然后写程序时，不需要写<code>#include &lt;reg51.h&gt;</code>而是写<code>#include &lt;stc8.h&gt;</code>,这个头文件已经将特殊功能寄存器全部定义好了。</p>
+<h1 id="Timer4"><a href="#Timer4" class="headerlink" title="Timer4"></a>Timer4</h1><p>Timer4，定时器/计数器。</p>
+<h2 id="控制寄存器-T4T3M"><a href="#控制寄存器-T4T3M" class="headerlink" title="控制寄存器-T4T3M"></a>控制寄存器-T4T3M</h2><p>不支持位寻址，复位值[0000,0000]，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEOY4S.jpg" alt="AEOY4S.jpg" border="0" />
+
+<h2 id="中断标志辅助寄存器-UXINTIF"><a href="#中断标志辅助寄存器-UXINTIF" class="headerlink" title="中断标志辅助寄存器-UXINTIF"></a>中断标志辅助寄存器-UXINTIF</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjYlQ.jpg" alt="AEjYlQ.jpg" border="0" />
+
+<h2 id="中断使能寄存器-IE"><a href="#中断使能寄存器-IE" class="headerlink" title="中断使能寄存器-IE"></a>中断使能寄存器-IE</h2><p>可位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjLnA.jpg" alt="AEjLnA.jpg" border="0" />
+
+<h2 id="中断使能寄存器2-IE2"><a href="#中断使能寄存器2-IE2" class="headerlink" title="中断使能寄存器2-IE2"></a>中断使能寄存器2-IE2</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjbXd.jpg" alt="AEjbXd.jpg" border="0" />
+
+<img src="https://s2.ax1x.com/2019/03/15/AEjH6H.jpg" alt="AEjH6H.jpg" border="0" />
+
+<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><p>定时器/计数器4的工作模式固定为 16 位重载模式。<br>T4L和T4H组合成为一个16位寄存器，T4L为低字节，T4H 为高字节。当[T4H,T4L]中的16 位计数值溢出时，系统会自动将内部16 位重载寄存器中的重载值装入[T4H,T4L]中。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEL3YF.jpg" alt="AEL3YF.jpg" border="0" />
+
+<h2 id="定时器初值计算"><a href="#定时器初值计算" class="headerlink" title="定时器初值计算"></a>定时器初值计算</h2><p>计算公式：</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVPFRP.jpg" alt="AVPFRP.jpg" border="0" />
+
+<p>65536：16位定时器，2<sup>16</sup>+1=65535+1=65536<br>T：想要设置的中断时间。<br>F<sub>osc</sub>：单片机晶振频率。<br>A：根据<a href="#%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8-T4T3M">控制寄存器-T4T3M</a>中<code>T4x12</code>:定时器4速度控制位。12T模式，即CPU时钟12 分频（FOSC/12），所以A=12；1T模式，即CPU时钟不分频分频（FOSC/1），所以A=1。<br>THx：高八位初值。把N对256求模。<br>TLx：低八位初值。把N对256求余。<br>例如：24M晶振，12分频，定时10ms。计算得到THx=177，TLx=224。转换为十六进制是THx=0xB1，TLx=0xE0</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVit6f.jpg" alt="AVit6f.jpg" border="0" />
+
+<h2 id="范例程序"><a href="#范例程序" class="headerlink" title="范例程序"></a>范例程序</h2><pre><code>#include &lt;STC8.H&gt;
+
+sbit LED=P1^0;
+
+void TM4_Isr() interrupt 20
+&amp;#123;
+    LED = !LED;                                 //测试端口
+    AUXINTIF &amp;= ~T4IF;                          //清中断标志
+&amp;#125;
+
+void main()
+&amp;#123;
+    //晶振频率为24MHz，定时10ms
+    T4L = 0xE0;
+    T4H = 0xB1;
+    T4T3M |= 0x80;                              //启动定时器
+    IE2 |= ET4;                                 //使能定时器4中断
+    EA = 1;                                    //开启中断
+
+    while(1);
+&amp;#125;</code></pre>
+<p>测试效果有些误差。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVFNCR.jpg" alt="AVFNCR.jpg" border="0" />
+
+<p><strong>本片文章会根据我的学习过程进行更新</strong></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>单片机</category>
+      </categories>
+      <tags>
+        <tag>STC8F</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Termux_笔记</title>
+    <url>/2019-02-15-19-30-03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><!--# Termux_笔记-->
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><h3 id="pkg命令"><a href="#pkg命令" class="headerlink" title="pkg命令"></a><code>pkg</code>命令</h3><pre><code>pkg search &lt;query&gt;              搜索包
+pkg install &lt;package&gt;           安装包
+pkg uninstall &lt;package&gt;         卸载包
+pkg reinstall &lt;package&gt;         重新安装包
+pkg update                      更新源
+pkg upgrade                     升级软件包
+pkg list-all                    列出可供安装的所有包
+pkg list-installed              列出已经安装的包
+pkg shoe &lt;package&gt;              显示某个包的详细信息
+pkg files &lt;package&gt;             显示某个包的相关文件夹路径</code></pre>
+<a id="more"></a> 
+<h2 id="目录环境结构"><a href="#目录环境结构" class="headerlink" title="目录环境结构"></a>目录环境结构</h2><pre><code>files
+|--home
+|--usr
+   |--bin
+   |--lib
+   |--share
+   |--var
+   |--etc
+   |--libexec
+   |--tmp</code></pre>
+<pre><code>$ echo $HOME
+/data/data/com.termux/files/home
+$ echo $PREFIX
+/data/data/com.termux/files/usr
+$ echo $TMPPREFIX
+/data/data/com.termux/files/usr/tmp/zsh</code></pre>
+<h2 id="更换国内源"><a href="#更换国内源" class="headerlink" title="更换国内源"></a>更换国内源</h2><p>更换<code>Termux</code>为清华大学源,加快软件包下载速度。</p>
+<h3 id="官方推荐方法"><a href="#官方推荐方法" class="headerlink" title="官方推荐方法"></a>官方推荐方法</h3><p>设置默认编辑器</p>
+<pre><code>$ export EDITOR=vim</code></pre>
+<p>编辑源文件</p>
+<pre><code>$ apt edit-sources</code></pre>
+<p>将原来的 <a href="https://termux.net/">https://termux.net</a> 官方源替换为 <a href="http://mirrors.tuna.tsinghua.edu.cn/termux">http://mirrors.tuna.tsinghua.edu.cn/termux</a><br>更换源后需要更新源</p>
+<pre><code>$ pkg update</code></pre>
+<h3 id="直接编辑源文件"><a href="#直接编辑源文件" class="headerlink" title="直接编辑源文件"></a>直接编辑源文件</h3><p>其实还有更简单的方法,类似于Linux下直接去编辑源文件:</p>
+<pre><code>$ vim  $PREFIX/etc/apt/sources.list
+$ pkg update</code></pre>
+<h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><pre><code>$ pkg update                                    更新源
+$ pkg install vim curl wget git unzip unrar     一些基本工具</code></pre>
+<h2 id="Termux优化"><a href="#Termux优化" class="headerlink" title="Termux优化"></a>Termux优化</h2><h3 id="终端配色"><a href="#终端配色" class="headerlink" title="终端配色"></a>终端配色</h3><p>主要使用了<a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>来替代<code>bash</code>作为默认<code>shell</code>。使用一键安装脚本来安装,一步到位,顺便启动了外置存储,可以直接访问SD卡下的目录。</p>
+<pre><code>$ sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</code></pre>
+<p>分别选择<code>背景色</code>和<code>字体</code>，可以参考如下选择：</p>
+<pre><code>Enter a number, leave blank to not to change: 14
+Enter a number, leave blank to not to change: 6</code></pre>
+<p>想要继续更改挑选配色的话,继续运行脚本来再次筛选：</p>
+<pre><code>$ ~/termux-ohmyzsh/install.sh</code></pre>
+<p>输入命令<code>exit</code>再回车确认，重启Termux配置生效。</p>
+<h3 id="访问外置储存优化"><a href="#访问外置储存优化" class="headerlink" title="访问外置储存优化"></a>访问外置储存优化</h3><p>执行过上面的<code>zsh</code>一键配置脚本后,并且授予文件访问权限的话,会在家目录生成<code>storage</code>目录，并且生成若干目录，软连接都指向外置存储卡的相应目录。<br>为了方便文件传输,直接在<code>storage</code>目录下创建软链接。<br>创建文件夹软连接<br>QQ</p>
+<pre><code>$ ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</code></pre>
+<p>TIM</p>
+<pre><code>$ ln -s /data/data/com.termux/files/home/storage/shared/tencent/TIMfile_recv TIM</code></pre>
+<p>微信</p>
+<pre><code>$ ln -s /data/data/com.termux/files/home/storage/shared/tencent/MicroMsg/Download Wechat</code></pre>
+<h3 id="oh-my-zsh主题配色"><a href="#oh-my-zsh主题配色" class="headerlink" title="oh-my-zsh主题配色"></a><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>主题配色</h3><p>编辑<code>.zshrc</code>配置文件</p>
+<pre><code>$ vim ~/.zshrc</code></pre>
+<p>第一行<code>ZSH_THEME=&quot;agnoster&quot;</code>，默认是<code>agnoster</code>主题。<br>在~/.oh-my-zsh/themes目录下放着oh-my-zsh所有的主题配置文件。<br>下面几款主题不错<br>agnoster<br><img src="https://image.3001.net/images/20180501/15251534292438.png" alt="agnoster"><br>robbyrussell<br><img src="https://image.3001.net/images/20180501/15251540733399.png" alt="robbyrussell"><br>jaischeema<br><img src="https://image.3001.net/images/20180501/15251541015433.png" alt="jaischeema"><br>re5et<br><img src="https://image.3001.net/images/20180501/15251541397.png" alt="re5et"><br>junkfood<br><img src="https://image.3001.net/images/20180501/15251541908342.png" alt="junkfood"><br>cloud<br><img src="https://image.3001.net/images/20180501/15251542579462.png" alt="cloud"><br>可以尝试<code>random</code>主题,每打开一个会话配色主题都是随机的。</p>
+<h2 id="修改启动问候语"><a href="#修改启动问候语" class="headerlink" title="修改启动问候语"></a>修改启动问候语</h2><p>编辑问候语文件直接修改问候语：</p>
+<pre class="line-numbers language-ha"><code class="language-ha">$ vim $PREFIX/etc/motd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="管理员身份"><a href="#管理员身份" class="headerlink" title="管理员身份"></a>管理员身份</h2><h3 id="手机没有root"><a href="#手机没有root" class="headerlink" title="手机没有root"></a>手机没有root</h3><p>利用<code>proot</code>工具来模拟某些需要root的环境。</p>
+<pre class="line-numbers language-ha"><code class="language-ha">$ pkg install proot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后终端下面输入：</p>
+<pre class="line-numbers language-ha"><code class="language-ha">$ termux-chroot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>即可模拟<code>root</code>环境<br>在这个<code>proot</code>环境下面,相当于是进入了<code>home</code>目录,可以很方便地进行一些配置。<br><img src="https://image.3001.net/images/20180502/15252406356840.png"><br>在管理员身份下，输入<code>exit</code>可回到普通用户身份。</p>
+<h2 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h2><pre class="line-numbers language-ha"><code class="language-ha">$ pkg install nodejs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果报错如下：</p>
+<pre class="line-numbers language-ha"><code class="language-ha">Cannot read property 'length' of undefined<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改<code>farm.js</code></p>
+<pre class="line-numbers language-ha"><code class="language-ha">$ vim $PREFIX/lib/node_modules/npm/node_modules/worker-farm/lib/farm.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>尝试将<code>length:</code>后指定一个数字，例如<code>length:4</code></p>
+<h2 id="安装Hexo博客"><a href="#安装Hexo博客" class="headerlink" title="安装Hexo博客"></a>安装Hexo博客</h2><pre class="line-numbers language-ha"><code class="language-ha">$ npm install hexo-cli -g
+$ hexo init Blog
+$ cd Blog
+$ npm install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Termux-笔记</category>
+      </categories>
+      <tags>
+        <tag>Termux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>音视频处理软件ffmpeg介绍</title>
+    <url>/2019-04-11-21-57-27/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="音视频处理软件ffmpeg介绍"><a href="#音视频处理软件ffmpeg介绍" class="headerlink" title="音视频处理软件ffmpeg介绍"></a>音视频处理软件ffmpeg介绍</h1><blockquote>
+<p>完整的跨平台解决方案，用于记录，转换和流传输音频和视频。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="音视频剪裁"><a href="#音视频剪裁" class="headerlink" title="音视频剪裁"></a>音视频剪裁</h2><pre><code>ffmpeg -i output.mp4 -ss 00:00:40 -t 30 output1.mp4</code></pre>
+<p><code>-i output.mp4</code>源文件。<br><code>-ss 00:00:40</code>表示剪裁开始时间，时：分：秒<br><code>-t 30</code>表示剪裁时长，单位秒。<br><code>output1.mp4</code>输出文件名。</p>
+<h2 id="音视频合并"><a href="#音视频合并" class="headerlink" title="音视频合并"></a>音视频合并</h2><pre><code>ffmpeg -f concat -i inputs.txt out.mp4</code></pre>
+<p><code>-f concat</code>合并命令<br><code>-i inputs.txt</code>中input.txt文件中添加需要合并的文件名，格式如下</p>
+<pre><code>file &#39;input1.mp4&#39;
+file &#39;input2.mp4&#39;</code></pre>
+<p><code>out.mp4</code>输出文件名</p>
+<h2 id="视频提取音频"><a href="#视频提取音频" class="headerlink" title="视频提取音频"></a>视频提取音频</h2><pre><code>ffmpeg -i input.mp4 -vn output.mp3</code></pre>
+<p><code>-i input.mp4</code>输入文件<br><code>-vn</code>提取音频<br><code>-acodec copy</code>音频编码方式不变<br><code>output.mp3</code>输出文件</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>软件教程</category>
+      </categories>
+      <tags>
+        <tag>多媒体处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next-代码块复制功能</title>
+    <url>/2019-02-16-10-18-11/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo博客，使用Next主题。<br>实现一键复制代码块。</p>
+<h2 id="下载-clipboard-js"><a href="#下载-clipboard-js" class="headerlink" title="下载 clipboard.js"></a>下载 clipboard.js</h2><p>第三方插件 clipboardjs，<a href="https://clipboardjs.com/">主页</a>和<a href="https://github.com/zenorocha/clipboard.js/">Github</a></p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/zenorocha/clipboard.js/archive/master.zip">https://github.com/zenorocha/clipboard.js/archive/master.zip</a></p>
+<a id="more"></a>
+<p>解压后将<code>src</code>目录下的<code>clipboard.js</code>和<code>clipboard.min.js</code>文件复制到<code>.\themes\next\source\js\src</code>目录下</p>
+<h2 id="clipboardjs-使用"><a href="#clipboardjs-使用" class="headerlink" title="clipboardjs 使用"></a>clipboardjs 使用</h2><p>在<code>.\themes\next\source\js\src</code>目录下，创建<code>clipboard-use.js</code>，文件内容如下：</p>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">/*页面载入完成后，创建复制按钮*/</span>
+  <span class="token operator">!</span><span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> t<span class="token punctuation">,</span> a<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> 
+    <span class="token comment" spellcheck="true">/* code */</span>
+    <span class="token keyword">var</span> initCopyCode <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> copyHtml <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      copyHtml <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'&lt;button class="btn-copy" data-clipboard-snippet="">'</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//fa fa-globe可以去字体库替换自己想要的图标</span>
+copyHtml <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'  &lt;i class="fa fa-clipboard">&lt;/i>&lt;span>copy&lt;/span>'</span><span class="token punctuation">;</span>
+      copyHtml <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'&lt;/button>'</span><span class="token punctuation">;</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".highlight .code pre"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>copyHtml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">new</span> <span class="token class-name">ClipboardJS</span><span class="token punctuation">(</span><span class="token string">'.btn-copy'</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          target<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>trigger<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> trigger<span class="token punctuation">.</span>nextElementSibling<span class="token punctuation">;</span>
+          <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token function">initCopyCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> document<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在<code>.\themes\next\source\css\_custom\custom.styl</code>样式文件中添加下面代码：</p>
+<pre class="line-numbers language-stylus"><code class="language-stylus"><span class="token comment" spellcheck="true">//代码块复制按钮</span>
+<span class="token selector">.highlight&amp;#123;</span>
+  <span class="token comment" spellcheck="true">//方便copy代码按钮（btn-copy）的定位</span>
+  <span class="token property-declaration"><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span></span>
+<span class="token selector">&amp;#125;
+.btn-copy &amp;#123;</span>
+    <span class="token property-declaration"><span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#eee</span><span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token func"><span class="token function">linear-gradient</span><span class="token punctuation">(</span><span class="token hexcode">#fcfcfc</span><span class="token punctuation">,</span><span class="token hexcode">#eee</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></span>
+    <span class="token property-declaration"><span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#d5d5d5</span><span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">3</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-webkit-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-moz-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-ms-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-webkit-appearance</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">13</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">700</span><span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-webkit-transition</span><span class="token punctuation">:</span> opacity <span class="token operator">.</span><span class="token number">3</span>s ease-<span class="token operator">in</span>-out<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">-o-transition</span><span class="token punctuation">:</span> opacity <span class="token operator">.</span><span class="token number">3</span>s ease-<span class="token operator">in</span>-out<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token operator">.</span><span class="token number">3</span>s ease-<span class="token operator">in</span>-out<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">2</span>px <span class="token number">6</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span></span>
+    <span class="token property-declaration"><span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span></span>
+<span class="token selector">&amp;#125;
+.btn-copy span &amp;#123;</span>
+    <span class="token property-declaration"><span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span></span>
+<span class="token selector">&amp;#125;
+.highlight:hover .btn-copy&amp;#123;</span>
+  <span class="token property-declaration"><span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
+&amp;#125<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="clipboardjs-引用"><a href="#clipboardjs-引用" class="headerlink" title="clipboardjs 引用"></a>clipboardjs 引用</h2><p>在.\themes\next\layout_layout.swig文件中，添加引用(最末尾添加或者body结束标签<code>&lt;/body&gt;</code>之前添加)：</p>
+<pre class="line-numbers language-haha"><code class="language-haha"><!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h2><p>上面方法无效可尝试下面方法。请先将上面的所有操作还原。<br>在<code>.\themes\next\source\lib</code>目录下新建文件夹<code>clipboard</code>。<br>使用上次下载的<code>clipboard.js-master.zip</code>解压文件中<code>src</code>目录下的文件，复制到刚刚新建文件夹<code>clipboard</code>中。<br>在<code>.\themes\next\source\js\src</code>目录下，新建文件<code>custom.js</code>，代码如下：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//此函数用于创建复制按钮</span>
+<span class="token keyword">function</span> <span class="token function">createCopyBtns</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> $codeArea <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"figure table"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//查看页面是否具有代码区域，没有代码块则不创建 复制按钮</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>$codeArea<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//复制成功后将要干的事情</span>
+        <span class="token keyword">function</span> <span class="token function">changeToSuccess</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+             $imgOK <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#copyBtn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">"#imgSuccess"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>$imgOK<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"display"</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"none"</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                    $imgOK<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                        opacity<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                        display<span class="token punctuation">:</span> <span class="token string">"block"</span>
+                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    $imgOK<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                        opacity<span class="token punctuation">:</span> <span class="token number">1</span>
+                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                        $imgOK<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                            opacity<span class="token punctuation">:</span> <span class="token number">0</span>
+                        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                        $imgOK<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"display"</span><span class="token punctuation">,</span> <span class="token string">"none"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//创建 全局复制按钮，仅有一组。包含：复制按钮，复制成功响应按钮</span>
+        <span class="token comment" spellcheck="true">//值得注意的是：1.按钮默认隐藏，2.位置使用绝对位置 position: absolute; (position: fixed 也可以，需要修改代码)</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".post-body"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span><span class="token string">'&lt;div id="copyBtn" style="opacity: 0; position: absolute;top:0px;display: none;line-height: 1; font-size:1.5em">&lt;span id="imgCopy" >&lt;i class="fa fa-paste fa-fw">&lt;/i>&lt;/span>&lt;span id="imgSuccess" style="display: none;">&lt;i class="fa fa-check-circle fa-fw" aria-hidden="true">&lt;/i>&lt;/span>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//创建 复制 插件，绑定单机时间到 指定元素，支持JQuery</span>
+        <span class="token keyword">var</span> clipboard <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Clipboard</span><span class="token punctuation">(</span><span class="token string">'#copyBtn'</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            target<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//返回需要复制的元素内容</span>
+                <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"[copyFlag]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            isSupported<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//支持复制内容</span>
+                <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"[copyFlag]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//复制成功事件绑定</span>
+        clipboard<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">,</span>
+            <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//清除内容被选择状态</span>
+                e<span class="token punctuation">.</span><span class="token function">clearSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">changeToSuccess</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//复制失败绑定事件</span>
+        clipboard<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span>
+            <span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Action:'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Trigger:'</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>trigger<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//鼠标 在复制按钮上滑动和离开后渐变显示/隐藏效果</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#copyBtn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span>
+            <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"opacity"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+            <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                    opacity<span class="token punctuation">:</span> <span class="token number">0</span>
+                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//感应鼠标是否在代码区</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"figure"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hover</span><span class="token punctuation">(</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//-------鼠标活动在代码块内</span>
+        <span class="token comment" spellcheck="true">//移除之前含有复制标志代码块的 copyFlag</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"[copyFlag]"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAttr</span><span class="token punctuation">(</span><span class="token string">"copyFlag"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//在新的（当前鼠标所在代码区）代码块插入标志：copyFlag</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".code"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"copyFlag"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//获取复制按钮</span>
+        $copyBtn <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#copyBtn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>$copyBtn<span class="token punctuation">.</span>lenght <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//获取到按钮的前提下进行一下操作</span>
+            <span class="token comment" spellcheck="true">//停止按钮动画效果</span>
+            <span class="token comment" spellcheck="true">//设置为 显示状态</span>
+            <span class="token comment" spellcheck="true">//修改 复制按钮 位置到 当前代码块开始部位</span>
+            <span class="token comment" spellcheck="true">//设置代码块 左侧位置</span>
+            $copyBtn<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            $copyBtn<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"opacity"</span><span class="token punctuation">,</span> <span class="token number">0.8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            $copyBtn<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"display"</span><span class="token punctuation">,</span> <span class="token string">"block"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            $copyBtn<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"top"</span><span class="token punctuation">,</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>$copyBtn<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"top"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top <span class="token operator">-</span> $copyBtn<span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            $copyBtn<span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"left"</span><span class="token punctuation">,</span> <span class="token operator">-</span>$copyBtn<span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//-------鼠标离开代码块</span>
+        <span class="token comment" spellcheck="true">//设置复制按钮可见度 2秒内到 0</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#copyBtn"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            opacity<span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//页面载入完成后，创建复制按钮</span>
+<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token function">createCopyBtns</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在<code>.themes\next\layout\_custom</code>目录下，新建文件<code>custom.swig</code>，代码如下：</p>
+<pre class="line-numbers language-swig"><code class="language-swig"><script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
+<script type="text/javascript" src="/js/src/custom.js"></script><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>修改文件<code>.\themes\next\layout\_layout.swig</code>，在标签<code>&lt;/body&gt;</code>前插入代码：</p>
+<pre><code>&amp;#123;% include &#39;_custom/custom.swig&#39; %&amp;#125;</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%89/">Felix</a><br><a href="https://www.jianshu.com/p/efbeddc5eb19">迟道-简书</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Next-笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next-优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next-添加文章书写样式</title>
+    <url>/2019-02-16-11-31-18/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="添加文章书写样式"><a href="#添加文章书写样式" class="headerlink" title="添加文章书写样式"></a>添加文章书写样式</h1><h2 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h2><p>打开<code>.\themes\next\source\css\_custom</code>目录下的<code>custom.styl</code>文件，添加代码如下：</p>
+<a id="more"></a>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        点击显/隐内容
+    </div>
+    <div class='spoiler-content'>
+        <pre><code>// 颜色块-黄
+span#inline-yellow &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #f0ad4e;
+&amp;#125;
+// 颜色块-绿
+span#inline-green &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #5cb85c;
+&amp;#125;
+// 颜色块-蓝
+span#inline-blue &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #2780e3;
+&amp;#125;
+// 颜色块-紫
+span#inline-purple &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #9954bb;
+&amp;#125;</code></pre>
+
+    </div>
+</div>
+<p>在你需要编辑的文章地方放置如下代码：</p>
+<pre><code>&lt;span id=&quot;inline-blue&quot;&gt; 站点配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-yellow&quot;&gt; 站点配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-green&quot;&gt; 主题配置文件 &lt;/span&gt;</code></pre>
+<p>示例<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></p>
+<h2 id="下载样式"><a href="#下载样式" class="headerlink" title="下载样式"></a>下载样式</h2><p>打开<code>.\themes\next\source\css\_custom\custom.styl</code>文件，添加属性样式：</p>
+<pre><code>a#download &amp;#123;
+display: inline-block;
+padding: 0 10px;
+color: #000;
+background: transparent;
+border: 2px solid #000;
+border-radius: 2px;
+transition: all .5s ease;
+font-weight: bold;
+&amp;:hover &amp;#123;
+background: #000;
+color: #fff;
+&amp;#125;
+&amp;#125;</code></pre>
+<p>在你需要编辑的文章地方放置如下代码：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://git-scm.com/download/win<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-download<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span> Download Now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>示例<br><a id="download" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/efbeddc5eb19">迟道-简书</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Next-笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next-优化</tag>
+      </tags>
   </entry>
 </search>
