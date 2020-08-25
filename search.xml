@@ -3,19 +3,20 @@
   <entry>
     <title>测试文章</title>
     <url>/2020-08-23-18-15-45/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1>
-        <div id="aplayer-MmnNlzQi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
+<li>音乐播放
+        <div id="aplayer-XdCYxAfp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-MmnNlzQi"),
+            element: document.getElementById("aplayer-XdCYxAfp"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
               title: "Wicked Games",
-              author: "111",
+              author: "Ramin Djawadi",
               url: "http://lc-8TQhzYIv.cn-n1.lcfile.com/1a7afdd79a2d15f7b531/Wicked%20Games.mp3",
               pic: "http://lc-8TQhzYIv.cn-n1.lcfile.com/ce6da9c138c33485d351/Wicked%20Games.jpg",
               lrc: ""
@@ -24,11 +25,22 @@
           window.aplayers || (window.aplayers = []);
           window.aplayers.push(ap);
         </script>
-<p>1<br>1<br>1<br>1<br>1<br>1</p>
+1<br>1<br>1<br>1<br>1<br>1</li>
+</ul>
 <p>1<br>1</p>
 <a id="more"></a>
 <p>1<br>1<br>1<br>1<br>1</p>
 ]]></content>
+      <categories>
+        <category>a</category>
+        <category>b</category>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>aa</tag>
+        <tag>bb</tag>
+        <tag>cc</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
