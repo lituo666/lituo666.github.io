@@ -4,29 +4,16 @@
     <title>测试文章</title>
     <url>/2020-08-23-18-15-45/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
-<li>音乐播放
-        <div id="aplayer-UZmjFEtA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-UZmjFEtA"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "Wicked Games",
-              author: "Ramin Djawadi",
-              url: "http://lc-8TQhzYIv.cn-n1.lcfile.com/1a7afdd79a2d15f7b531/Wicked%20Games.mp3",
-              pic: "http://lc-8TQhzYIv.cn-n1.lcfile.com/ce6da9c138c33485d351/Wicked%20Games.jpg",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-1<br>1<br>1<br>1<br>1<br>1</li>
+<li>音乐播放</li>
 </ul>
+<pre><code>&amp;#123;% aplayer &quot;Wicked Games&quot; &quot;Ramin Djawadi&quot; &quot;http://lc-8TQhzYIv.cn-n1.lcfile.com/1a7afdd79a2d15f7b531/Wicked%20Games.mp3&quot; &quot;http://lc-8TQhzYIv.cn-n1.lcfile.com/ce6da9c138c33485d351/Wicked%20Games.jpg&quot; %&amp;#125;</code></pre>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1437405183&auto=0&height=66"></iframe>
+1
+1
+1
+1
+1
+
 <p>1<br>1</p>
 <a id="more"></a>
 <p>1<br>1<br>1<br>1<br>1</p>
