@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试文章</title>
-    <url>/2020-08-23-18-15-45/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
-<li>音乐播放</li>
-</ul>
-<pre><code>&amp;#123;% aplayer &quot;Wicked Games&quot; &quot;Ramin Djawadi&quot; &quot;http://lc-8TQhzYIv.cn-n1.lcfile.com/1a7afdd79a2d15f7b531/Wicked%20Games.mp3&quot; &quot;http://lc-8TQhzYIv.cn-n1.lcfile.com/ce6da9c138c33485d351/Wicked%20Games.jpg&quot; %&amp;#125;</code></pre>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1437405183&auto=0&height=66"></iframe>
-1
-1
-1
-1
-1
-
-<p>1<br>1</p>
-<a id="more"></a>
-<p>1<br>1<br>1<br>1<br>1</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>a</category>
-        <category>b</category>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>aa</tag>
-        <tag>bb</tag>
-        <tag>cc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo实时预览Markdown</title>
     <url>/2019-02-26-18-46-01/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>用Hexo写文章时因为时用的Markdown语法写的，所以就非常需要进行实时的编辑预览效果，一些文本编辑软件或许可以预览，但是有时和实际总是用点差距，所以介绍的这款插件就可以实现实时预览效果。</p>
@@ -54,6 +25,35 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
       </categories>
       <tags>
         <tag>Hexo插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试文章</title>
+    <url>/2020-08-23-18-15-45/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
+<li>音乐播放<br>使用网易云音乐外链播放器</li>
+</ul>
+<pre><code>&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=1437405183&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;</code></pre>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1437405183&auto=0&height=66"></iframe>
+1
+1
+1
+1
+1
+
+<p>1<br>1</p>
+<a id="more"></a>
+<p>1<br>1<br>1<br>1<br>1</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>a</category>
+        <category>b</category>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>aa</tag>
+        <tag>bb</tag>
+        <tag>cc</tag>
       </tags>
   </entry>
   <entry>
