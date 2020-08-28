@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo实时预览Markdown</title>
-    <url>/2019-02-26-18-46-01/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>用Hexo写文章时因为时用的Markdown语法写的，所以就非常需要进行实时的编辑预览效果，一些文本编辑软件或许可以预览，但是有时和实际总是用点差距，所以介绍的这款插件就可以实现实时预览效果。</p>
-<a id="more"></a>
-
-<h2 id="Hexo-Browsersync"><a href="#Hexo-Browsersync" class="headerlink" title="Hexo-Browsersync"></a>Hexo-Browsersync</h2><p>首先进入Hexo项目目录下，运行如下命令安装<code>hexo-browsersync</code>插件</p>
-<pre><code>npm install hexo-browsersync --save</code></pre>
-<p>等待安装完成，这个安装过程最好挂全局代理，否则可能有点慢。<br>然后运行<code>hexo s</code>出现一下内容说明成功啦</p>
-<pre><code>$ hexo s
-INFO  Start processing
-[Browsersync] Access URLs:
- ----------------------------------
-          UI: http://localhost:3001
- ----------------------------------
- UI External: http://localhost:3001
- ----------------------------------
-INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre>
-<p>现在就可以啦，只要在编辑文档时保存一下，网页就会自动进行刷新，就可以马上看到效果啦。</p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试文章</title>
     <url>/2020-08-23-18-15-45/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="测试实施"><a href="#测试实施" class="headerlink" title="测试实施"></a>测试实施</h1><ul>
@@ -54,6 +27,33 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p
         <tag>aa</tag>
         <tag>bb</tag>
         <tag>cc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo实时预览Markdown</title>
+    <url>/2019-02-26-18-46-01/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>用Hexo写文章时因为时用的Markdown语法写的，所以就非常需要进行实时的编辑预览效果，一些文本编辑软件或许可以预览，但是有时和实际总是用点差距，所以介绍的这款插件就可以实现实时预览效果。</p>
+<a id="more"></a>
+
+<h2 id="Hexo-Browsersync"><a href="#Hexo-Browsersync" class="headerlink" title="Hexo-Browsersync"></a>Hexo-Browsersync</h2><p>首先进入Hexo项目目录下，运行如下命令安装<code>hexo-browsersync</code>插件</p>
+<pre><code>npm install hexo-browsersync --save</code></pre>
+<p>等待安装完成，这个安装过程最好挂全局代理，否则可能有点慢。<br>然后运行<code>hexo s</code>出现一下内容说明成功啦</p>
+<pre><code>$ hexo s
+INFO  Start processing
+[Browsersync] Access URLs:
+ ----------------------------------
+          UI: http://localhost:3001
+ ----------------------------------
+ UI External: http://localhost:3001
+ ----------------------------------
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></pre>
+<p>现在就可以啦，只要在编辑文档时保存一下，网页就会自动进行刷新，就可以马上看到效果啦。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo插件</tag>
       </tags>
   </entry>
   <entry>
@@ -228,6 +228,73 @@ Content in the first column | Content in the second column</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>STC8F系列单片机定时器学习</title>
+    <url>/2019-03-15-17-20-33/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2<br>主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。</p>
+<a id="more"></a>
+
+<p>由于STC8F添加了很多特殊寄存器，所以请先按下图操作</p>
+<img src="https://s2.ax1x.com/2019/03/15/AELH6s.jpg" alt="AELH6s.jpg" border="0" />
+
+<p>然后写程序时，不需要写<code>#include &lt;reg51.h&gt;</code>而是写<code>#include &lt;stc8.h&gt;</code>,这个头文件已经将特殊功能寄存器全部定义好了。</p>
+<h1 id="Timer4"><a href="#Timer4" class="headerlink" title="Timer4"></a>Timer4</h1><p>Timer4，定时器/计数器。</p>
+<h2 id="控制寄存器-T4T3M"><a href="#控制寄存器-T4T3M" class="headerlink" title="控制寄存器-T4T3M"></a>控制寄存器-T4T3M</h2><p>不支持位寻址，复位值[0000,0000]，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEOY4S.jpg" alt="AEOY4S.jpg" border="0" />
+
+<h2 id="中断标志辅助寄存器-UXINTIF"><a href="#中断标志辅助寄存器-UXINTIF" class="headerlink" title="中断标志辅助寄存器-UXINTIF"></a>中断标志辅助寄存器-UXINTIF</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjYlQ.jpg" alt="AEjYlQ.jpg" border="0" />
+
+<h2 id="中断使能寄存器-IE"><a href="#中断使能寄存器-IE" class="headerlink" title="中断使能寄存器-IE"></a>中断使能寄存器-IE</h2><p>可位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjLnA.jpg" alt="AEjLnA.jpg" border="0" />
+
+<h2 id="中断使能寄存器2-IE2"><a href="#中断使能寄存器2-IE2" class="headerlink" title="中断使能寄存器2-IE2"></a>中断使能寄存器2-IE2</h2><p>不支持位寻址，详细定义请看下图。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEjbXd.jpg" alt="AEjbXd.jpg" border="0" />
+
+<img src="https://s2.ax1x.com/2019/03/15/AEjH6H.jpg" alt="AEjH6H.jpg" border="0" />
+
+<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><p>定时器/计数器4的工作模式固定为 16 位重载模式。<br>T4L和T4H组合成为一个16位寄存器，T4L为低字节，T4H 为高字节。当[T4H,T4L]中的16 位计数值溢出时，系统会自动将内部16 位重载寄存器中的重载值装入[T4H,T4L]中。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AEL3YF.jpg" alt="AEL3YF.jpg" border="0" />
+
+<h2 id="定时器初值计算"><a href="#定时器初值计算" class="headerlink" title="定时器初值计算"></a>定时器初值计算</h2><p>计算公式：</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVPFRP.jpg" alt="AVPFRP.jpg" border="0" />
+
+<p>65536：16位定时器，2<sup>16</sup>+1=65535+1=65536<br>T：想要设置的中断时间。<br>F<sub>osc</sub>：单片机晶振频率。<br>A：根据<a href="#%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8-T4T3M">控制寄存器-T4T3M</a>中<code>T4x12</code>:定时器4速度控制位。12T模式，即CPU时钟12 分频（FOSC/12），所以A=12；1T模式，即CPU时钟不分频分频（FOSC/1），所以A=1。<br>THx：高八位初值。把N对256求模。<br>TLx：低八位初值。把N对256求余。<br>例如：24M晶振，12分频，定时10ms。计算得到THx=177，TLx=224。转换为十六进制是THx=0xB1，TLx=0xE0</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVit6f.jpg" alt="AVit6f.jpg" border="0" />
+
+<h2 id="范例程序"><a href="#范例程序" class="headerlink" title="范例程序"></a>范例程序</h2><pre><code>#include &lt;STC8.H&gt;
+
+sbit LED=P1^0;
+
+void TM4_Isr() interrupt 20
+&amp;#123;
+    LED = !LED;                                 //测试端口
+    AUXINTIF &amp;= ~T4IF;                          //清中断标志
+&amp;#125;
+
+void main()
+&amp;#123;
+    //晶振频率为24MHz，定时10ms
+    T4L = 0xE0;
+    T4H = 0xB1;
+    T4T3M |= 0x80;                              //启动定时器
+    IE2 |= ET4;                                 //使能定时器4中断
+    EA = 1;                                    //开启中断
+
+    while(1);
+&amp;#125;</code></pre>
+<p>测试效果有些误差。</p>
+<img src="https://s2.ax1x.com/2019/03/15/AVFNCR.jpg" alt="AVFNCR.jpg" border="0" />
+
+<p><strong>本片文章会根据我的学习过程进行更新</strong></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>单片机</category>
+      </categories>
+      <tags>
+        <tag>STC8F</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>next-折叠块功能</title>
     <url>/2019-02-16-09-05-03/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="基于Hexo-Next的主题修改添加折叠块功能"><a href="#基于Hexo-Next的主题修改添加折叠块功能" class="headerlink" title="基于Hexo Next的主题修改添加折叠块功能"></a>基于Hexo Next的主题修改添加折叠块功能</h1><h2 id="在post-details-js中添加折叠js"><a href="#在post-details-js中添加折叠js" class="headerlink" title="在post-details.js中添加折叠js"></a>在post-details.js中添加折叠js</h2><p>next主题的主要js位于themes/next/source/js/src/post-details.js<br>在里面找合适的位置，添加如下代码：</p>
@@ -298,73 +365,6 @@ hexo<span class="token punctuation">.</span>extend<span class="token punctuation
       </categories>
       <tags>
         <tag>Next-优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>STC8F系列单片机定时器学习</title>
-    <url>/2019-03-15-17-20-33/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本篇文章介绍STC8F系列单片机。我现在使用的型号是STC8F2K08S2<br>主要介绍定时器的使用。也算是自己的学习笔记吧，什么时候忘了的话，再看看就记起来了。</p>
-<a id="more"></a>
-
-<p>由于STC8F添加了很多特殊寄存器，所以请先按下图操作</p>
-<img src="https://s2.ax1x.com/2019/03/15/AELH6s.jpg" alt="AELH6s.jpg" border="0" />
-
-<p>然后写程序时，不需要写<code>#include &lt;reg51.h&gt;</code>而是写<code>#include &lt;stc8.h&gt;</code>,这个头文件已经将特殊功能寄存器全部定义好了。</p>
-<h1 id="Timer4"><a href="#Timer4" class="headerlink" title="Timer4"></a>Timer4</h1><p>Timer4，定时器/计数器。</p>
-<h2 id="控制寄存器-T4T3M"><a href="#控制寄存器-T4T3M" class="headerlink" title="控制寄存器-T4T3M"></a>控制寄存器-T4T3M</h2><p>不支持位寻址，复位值[0000,0000]，详细定义请看下图。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AEOY4S.jpg" alt="AEOY4S.jpg" border="0" />
-
-<h2 id="中断标志辅助寄存器-UXINTIF"><a href="#中断标志辅助寄存器-UXINTIF" class="headerlink" title="中断标志辅助寄存器-UXINTIF"></a>中断标志辅助寄存器-UXINTIF</h2><p>不支持位寻址，详细定义请看下图。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AEjYlQ.jpg" alt="AEjYlQ.jpg" border="0" />
-
-<h2 id="中断使能寄存器-IE"><a href="#中断使能寄存器-IE" class="headerlink" title="中断使能寄存器-IE"></a>中断使能寄存器-IE</h2><p>可位寻址，详细定义请看下图。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AEjLnA.jpg" alt="AEjLnA.jpg" border="0" />
-
-<h2 id="中断使能寄存器2-IE2"><a href="#中断使能寄存器2-IE2" class="headerlink" title="中断使能寄存器2-IE2"></a>中断使能寄存器2-IE2</h2><p>不支持位寻址，详细定义请看下图。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AEjbXd.jpg" alt="AEjbXd.jpg" border="0" />
-
-<img src="https://s2.ax1x.com/2019/03/15/AEjH6H.jpg" alt="AEjH6H.jpg" border="0" />
-
-<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><p>定时器/计数器4的工作模式固定为 16 位重载模式。<br>T4L和T4H组合成为一个16位寄存器，T4L为低字节，T4H 为高字节。当[T4H,T4L]中的16 位计数值溢出时，系统会自动将内部16 位重载寄存器中的重载值装入[T4H,T4L]中。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AEL3YF.jpg" alt="AEL3YF.jpg" border="0" />
-
-<h2 id="定时器初值计算"><a href="#定时器初值计算" class="headerlink" title="定时器初值计算"></a>定时器初值计算</h2><p>计算公式：</p>
-<img src="https://s2.ax1x.com/2019/03/15/AVPFRP.jpg" alt="AVPFRP.jpg" border="0" />
-
-<p>65536：16位定时器，2<sup>16</sup>+1=65535+1=65536<br>T：想要设置的中断时间。<br>F<sub>osc</sub>：单片机晶振频率。<br>A：根据<a href="#%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8-T4T3M">控制寄存器-T4T3M</a>中<code>T4x12</code>:定时器4速度控制位。12T模式，即CPU时钟12 分频（FOSC/12），所以A=12；1T模式，即CPU时钟不分频分频（FOSC/1），所以A=1。<br>THx：高八位初值。把N对256求模。<br>TLx：低八位初值。把N对256求余。<br>例如：24M晶振，12分频，定时10ms。计算得到THx=177，TLx=224。转换为十六进制是THx=0xB1，TLx=0xE0</p>
-<img src="https://s2.ax1x.com/2019/03/15/AVit6f.jpg" alt="AVit6f.jpg" border="0" />
-
-<h2 id="范例程序"><a href="#范例程序" class="headerlink" title="范例程序"></a>范例程序</h2><pre><code>#include &lt;STC8.H&gt;
-
-sbit LED=P1^0;
-
-void TM4_Isr() interrupt 20
-&amp;#123;
-    LED = !LED;                                 //测试端口
-    AUXINTIF &amp;= ~T4IF;                          //清中断标志
-&amp;#125;
-
-void main()
-&amp;#123;
-    //晶振频率为24MHz，定时10ms
-    T4L = 0xE0;
-    T4H = 0xB1;
-    T4T3M |= 0x80;                              //启动定时器
-    IE2 |= ET4;                                 //使能定时器4中断
-    EA = 1;                                    //开启中断
-
-    while(1);
-&amp;#125;</code></pre>
-<p>测试效果有些误差。</p>
-<img src="https://s2.ax1x.com/2019/03/15/AVFNCR.jpg" alt="AVFNCR.jpg" border="0" />
-
-<p><strong>本片文章会根据我的学习过程进行更新</strong></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>单片机</category>
-      </categories>
-      <tags>
-        <tag>STC8F</tag>
       </tags>
   </entry>
   <entry>
@@ -475,6 +475,109 @@ file &#39;input2.mp4&#39;</code></pre>
       </categories>
       <tags>
         <tag>多媒体处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next-添加文章书写样式</title>
+    <url>/2019-02-16-11-31-18/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="添加文章书写样式"><a href="#添加文章书写样式" class="headerlink" title="添加文章书写样式"></a>添加文章书写样式</h1><h2 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h2><p>打开<code>.\themes\next\source\css\_custom</code>目录下的<code>custom.styl</code>文件，添加代码如下：</p>
+<a id="more"></a>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        点击显/隐内容
+    </div>
+    <div class='spoiler-content'>
+        <pre><code>// 颜色块-黄
+span#inline-yellow &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #f0ad4e;
+&amp;#125;
+// 颜色块-绿
+span#inline-green &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #5cb85c;
+&amp;#125;
+// 颜色块-蓝
+span#inline-blue &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #2780e3;
+&amp;#125;
+// 颜色块-紫
+span#inline-purple &amp;#123;
+display:inline;
+padding:.2em .6em .3em;
+font-size:80%;
+font-weight:bold;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0;
+background-color: #9954bb;
+&amp;#125;</code></pre>
+
+    </div>
+</div>
+<p>在你需要编辑的文章地方放置如下代码：</p>
+<pre><code>&lt;span id=&quot;inline-blue&quot;&gt; 站点配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-yellow&quot;&gt; 站点配置文件 &lt;/span&gt;
+&lt;span id=&quot;inline-green&quot;&gt; 主题配置文件 &lt;/span&gt;</code></pre>
+<p>示例<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></p>
+<h2 id="下载样式"><a href="#下载样式" class="headerlink" title="下载样式"></a>下载样式</h2><p>打开<code>.\themes\next\source\css\_custom\custom.styl</code>文件，添加属性样式：</p>
+<pre><code>a#download &amp;#123;
+display: inline-block;
+padding: 0 10px;
+color: #000;
+background: transparent;
+border: 2px solid #000;
+border-radius: 2px;
+transition: all .5s ease;
+font-weight: bold;
+&amp;:hover &amp;#123;
+background: #000;
+color: #fff;
+&amp;#125;
+&amp;#125;</code></pre>
+<p>在你需要编辑的文章地方放置如下代码：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://git-scm.com/download/win<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-download<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span> Download Now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>示例<br><a id="download" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/efbeddc5eb19">迟道-简书</a></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Next-笔记</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next-优化</tag>
       </tags>
   </entry>
   <entry>
@@ -654,109 +757,6 @@ copyHtml <span class="token operator">+</span><span class="token operator">=</sp
 <p>修改文件<code>.\themes\next\layout\_layout.swig</code>，在标签<code>&lt;/body&gt;</code>前插入代码：</p>
 <pre><code>&amp;#123;% include &#39;_custom/custom.swig&#39; %&amp;#125;</code></pre>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://yfzhou.coding.me/2018/08/27/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%89/">Felix</a><br><a href="https://www.jianshu.com/p/efbeddc5eb19">迟道-简书</a></p>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Next-笔记</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next-优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>next-添加文章书写样式</title>
-    <url>/2019-02-16-11-31-18/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="添加文章书写样式"><a href="#添加文章书写样式" class="headerlink" title="添加文章书写样式"></a>添加文章书写样式</h1><h2 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h2><p>打开<code>.\themes\next\source\css\_custom</code>目录下的<code>custom.styl</code>文件，添加代码如下：</p>
-<a id="more"></a>
-<div class='spoiler collapsed'>
-    <div class='spoiler-title'>
-        点击显/隐内容
-    </div>
-    <div class='spoiler-content'>
-        <pre><code>// 颜色块-黄
-span#inline-yellow &amp;#123;
-display:inline;
-padding:.2em .6em .3em;
-font-size:80%;
-font-weight:bold;
-line-height:1;
-color:#fff;
-text-align:center;
-white-space:nowrap;
-vertical-align:baseline;
-border-radius:0;
-background-color: #f0ad4e;
-&amp;#125;
-// 颜色块-绿
-span#inline-green &amp;#123;
-display:inline;
-padding:.2em .6em .3em;
-font-size:80%;
-font-weight:bold;
-line-height:1;
-color:#fff;
-text-align:center;
-white-space:nowrap;
-vertical-align:baseline;
-border-radius:0;
-background-color: #5cb85c;
-&amp;#125;
-// 颜色块-蓝
-span#inline-blue &amp;#123;
-display:inline;
-padding:.2em .6em .3em;
-font-size:80%;
-font-weight:bold;
-line-height:1;
-color:#fff;
-text-align:center;
-white-space:nowrap;
-vertical-align:baseline;
-border-radius:0;
-background-color: #2780e3;
-&amp;#125;
-// 颜色块-紫
-span#inline-purple &amp;#123;
-display:inline;
-padding:.2em .6em .3em;
-font-size:80%;
-font-weight:bold;
-line-height:1;
-color:#fff;
-text-align:center;
-white-space:nowrap;
-vertical-align:baseline;
-border-radius:0;
-background-color: #9954bb;
-&amp;#125;</code></pre>
-
-    </div>
-</div>
-<p>在你需要编辑的文章地方放置如下代码：</p>
-<pre><code>&lt;span id=&quot;inline-blue&quot;&gt; 站点配置文件 &lt;/span&gt;
-&lt;span id=&quot;inline-purple&quot;&gt; 主题配置文件 &lt;/span&gt;
-&lt;span id=&quot;inline-yellow&quot;&gt; 站点配置文件 &lt;/span&gt;
-&lt;span id=&quot;inline-green&quot;&gt; 主题配置文件 &lt;/span&gt;</code></pre>
-<p>示例<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></p>
-<h2 id="下载样式"><a href="#下载样式" class="headerlink" title="下载样式"></a>下载样式</h2><p>打开<code>.\themes\next\source\css\_custom\custom.styl</code>文件，添加属性样式：</p>
-<pre><code>a#download &amp;#123;
-display: inline-block;
-padding: 0 10px;
-color: #000;
-background: transparent;
-border: 2px solid #000;
-border-radius: 2px;
-transition: all .5s ease;
-font-weight: bold;
-&amp;:hover &amp;#123;
-background: #000;
-color: #fff;
-&amp;#125;
-&amp;#125;</code></pre>
-<p>在你需要编辑的文章地方放置如下代码：</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>download<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://git-scm.com/download/win<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-download<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span> Download Now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>示例<br><a id="download" href="https://git-scm.com/download/win"><i class="fa fa-download"></i><span> Download Now</span> </a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/efbeddc5eb19">迟道-简书</a></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>Next-笔记</category>
